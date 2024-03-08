@@ -1786,19 +1786,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DAM2B-09\\.nuget\\packages\\": {}
+    "C:\\Users\\pedro.lopez.manrique\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DAM2B-09\\source\\repos\\ProyectoVb\\ProyectoVb\\ProyectoVb.vbproj",
+      "projectUniqueName": "D:\\ProyectoVisualBasic\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
       "projectName": "ProyectoVb",
-      "projectPath": "C:\\Users\\DAM2B-09\\source\\repos\\ProyectoVb\\ProyectoVb\\ProyectoVb.vbproj",
-      "packagesPath": "C:\\Users\\DAM2B-09\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DAM2B-09\\source\\repos\\ProyectoVb\\ProyectoVb\\obj\\",
+      "projectPath": "D:\\ProyectoVisualBasic\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
+      "packagesPath": "C:\\Users\\pedro.lopez.manrique\\.nuget\\packages\\",
+      "outputPath": "D:\\ProyectoVisualBasic\\ProyectoVB\\ProyectoVb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DAM2B-09\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pedro.lopez.manrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
