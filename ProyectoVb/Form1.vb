@@ -3,24 +3,21 @@
 Public Class Form1
 
 
-    Private Sub btn_Click(sender As Object, e As EventArgs) Handles btn.Click
+    Dim s As New conexion
 
-        Dim s As New conexion
-        s.Probarconexion
+    Sub Main()
 
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        s.Probarconexion()
 
     End Sub
 
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Private Sub iniciarSesion_Click(sender As Object, e As EventArgs) Handles btnInicioSesion.Click
+        Dim manager As New manager
+        Dim name_user As String = "Owner"
+        Dim psw As String = "1234"
+        If manager.login_reg(name_user, psw, 1) > 0 Then
+            MessageBox.Show("Has iniciado sesion")
+        End If
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
-
-    End Sub
 End Class

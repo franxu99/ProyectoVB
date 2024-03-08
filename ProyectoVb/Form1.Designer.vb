@@ -24,7 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         btn = New Button()
         Button1 = New Button()
-        Button2 = New Button()
+        btnInicioSesion = New Button()
         GroupBox1 = New GroupBox()
         GroupBox2 = New GroupBox()
         GroupBox1.SuspendLayout()
@@ -46,7 +46,7 @@ Partial Class Form1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
         Button1.Cursor = Cursors.Hand
-        Button1.Font = New Font("Palatino Linotype", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Palatino Linotype", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.Black
         Button1.Location = New Point(177, 345)
         Button1.Name = "Button1"
@@ -55,25 +55,25 @@ Partial Class Form1
         Button1.Text = "REGISTRARSE"
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' btnInicioSesion
         ' 
-        Button2.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
-        Button2.Cursor = Cursors.Hand
-        Button2.Font = New Font("Palatino Linotype", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button2.ForeColor = SystemColors.ActiveCaptionText
-        Button2.Location = New Point(20, 345)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(138, 44)
-        Button2.TabIndex = 2
-        Button2.Text = "LOG IN"
-        Button2.TextImageRelation = TextImageRelation.ImageAboveText
-        Button2.UseVisualStyleBackColor = False
+        btnInicioSesion.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
+        btnInicioSesion.Cursor = Cursors.Hand
+        btnInicioSesion.Font = New Font("Palatino Linotype", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnInicioSesion.ForeColor = SystemColors.ActiveCaptionText
+        btnInicioSesion.Location = New Point(20, 345)
+        btnInicioSesion.Name = "btnInicioSesion"
+        btnInicioSesion.Size = New Size(138, 44)
+        btnInicioSesion.TabIndex = 2
+        btnInicioSesion.Text = "LOG IN"
+        btnInicioSesion.TextImageRelation = TextImageRelation.ImageAboveText
+        btnInicioSesion.UseVisualStyleBackColor = False
         ' 
         ' GroupBox1
         ' 
         GroupBox1.BackColor = Color.SandyBrown
         GroupBox1.Controls.Add(Button1)
-        GroupBox1.Controls.Add(Button2)
+        GroupBox1.Controls.Add(btnInicioSesion)
         GroupBox1.Location = New Point(218, 23)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(334, 409)
@@ -91,7 +91,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SandyBrown
         ClientSize = New Size(800, 450)
@@ -106,7 +106,7 @@ Partial Class Form1
 
     Friend WithEvents btn As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnInicioSesion As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
 
