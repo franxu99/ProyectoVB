@@ -26,7 +26,13 @@ Partial Class Form1
         Button1 = New Button()
         btnInicioSesion = New Button()
         GroupBox1 = New GroupBox()
+        Label2 = New Label()
+        Label1 = New Label()
+        tbPswLog = New TextBox()
+        tbNameLog = New TextBox()
         GroupBox2 = New GroupBox()
+        btnRecPsw = New Button()
+        tbRecPsw = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -72,6 +78,12 @@ Partial Class Form1
         ' GroupBox1
         ' 
         GroupBox1.BackColor = Color.SandyBrown
+        GroupBox1.Controls.Add(tbRecPsw)
+        GroupBox1.Controls.Add(btnRecPsw)
+        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(Label1)
+        GroupBox1.Controls.Add(tbPswLog)
+        GroupBox1.Controls.Add(tbNameLog)
         GroupBox1.Controls.Add(Button1)
         GroupBox1.Controls.Add(btnInicioSesion)
         GroupBox1.Location = New Point(218, 23)
@@ -79,6 +91,38 @@ Partial Class Form1
         GroupBox1.Size = New Size(334, 409)
         GroupBox1.TabIndex = 3
         GroupBox1.TabStop = False
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(63, 159)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(67, 15)
+        Label2.TabIndex = 6
+        Label2.Text = "Contraseña"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(63, 72)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(47, 15)
+        Label1.TabIndex = 5
+        Label1.Text = "Usuario"
+        ' 
+        ' tbPswLog
+        ' 
+        tbPswLog.Location = New Point(157, 156)
+        tbPswLog.Name = "tbPswLog"
+        tbPswLog.Size = New Size(130, 23)
+        tbPswLog.TabIndex = 4
+        ' 
+        ' tbNameLog
+        ' 
+        tbNameLog.Location = New Point(157, 69)
+        tbNameLog.Name = "tbNameLog"
+        tbNameLog.Size = New Size(130, 23)
+        tbNameLog.TabIndex = 3
         ' 
         ' GroupBox2
         ' 
@@ -88,6 +132,22 @@ Partial Class Form1
         GroupBox2.Size = New Size(357, 432)
         GroupBox2.TabIndex = 4
         GroupBox2.TabStop = False
+        ' 
+        ' btnRecPsw
+        ' 
+        btnRecPsw.Location = New Point(88, 268)
+        btnRecPsw.Name = "btnRecPsw"
+        btnRecPsw.Size = New Size(156, 23)
+        btnRecPsw.TabIndex = 7
+        btnRecPsw.Text = "Recuperar Contraseña"
+        btnRecPsw.UseVisualStyleBackColor = True
+        ' 
+        ' tbRecPsw
+        ' 
+        tbRecPsw.Location = New Point(88, 223)
+        tbRecPsw.Name = "tbRecPsw"
+        tbRecPsw.Size = New Size(156, 23)
+        tbRecPsw.TabIndex = 8
         ' 
         ' Form1
         ' 
@@ -101,6 +161,7 @@ Partial Class Form1
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -109,5 +170,11 @@ Partial Class Form1
     Friend WithEvents btnInicioSesion As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents tbPswLog As TextBox
+    Friend WithEvents tbNameLog As TextBox
+    Friend WithEvents btnRecPsw As Button
+    Friend WithEvents tbRecPsw As TextBox
 
 End Class

@@ -1,7 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports MimeKit
+Imports MailKit.Net.Smtp
+Imports MailKit.Security
 Public Class manager
 
-    Dim connectionString As String = "server=localhost;port=3309;database=vbdatabase;user=root; password=joyfe"
+    Dim connectionString As String = "server=localhost;port=3306;database=vbdatabase;user=root; password=1234"
 
     Public Function login_reg(ByVal name_user As String, ByVal psw As String, ByVal opc As Integer) As Integer
         Dim nombreProcedimiento As String = ""
@@ -40,5 +43,35 @@ Public Class manager
         Return resultado
 
     End Function
+
+    Public Sub recuperarContraseña(ByVal emailDestino As String)
+        Dim message As New MimeMessage()
+
+        Try
+
+            message.From.Add(New MailboxAddress("ProyectoVB", emailDestino))
+            message.To.Add(New MailboxAddress("proyectovb343@gmail.com", emailDestino))
+            message.Subject = "Cambio contraseña"
+            Dim fechaHoraActual As DateTime = DateTime.Now
+            Dim formatoFechaHora As String = fechaHoraActual.ToString("yyyyMMddHHmmss")
+            message.Body = New TextPart("plain") With {.Text = "La nueva contraseña es: " + formatoFechaHora}
+
+
+            Using client As New SmtpClient()
+                client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls)
+                client.Authenticate("proyectovb343@gmail.com", "xgep sjez rjld nvan")
+
+                client.Send(message)
+                client.Disconnect(True)
+            End Using
+
+            MessageBox.Show("Correo enviado.", "Mail Sender", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As Exception
+            MessageBox.Show("Ocurrio un error al enviar el correo: " & ex.Message,
+ "Mail Sender", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
 
 End Class

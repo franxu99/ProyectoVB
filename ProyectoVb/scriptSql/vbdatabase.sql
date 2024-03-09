@@ -33,6 +33,10 @@ insert into roles(description) values
 ("Owner"),("Admin"),("User");
 insert into users(name, password,id_rol)
 values("Owner","1234",1);
+insert into users(name, password,id_rol)
+values("Admin","1234",2);
+insert into users(name, password,id_rol)
+values("User","1234",3);
 
 /* Explicación:
 Procedimiento que añade un nuevo registro en la tabla 'users'
@@ -64,7 +68,7 @@ create procedure findUser(in _name varchar(255),in _pass varchar(255),out _res i
 begin
 	declare val int default 0;
     set _res= -99;
-	select id_user into val from users where name=_name and password=_pass;
+	select id_rol into val from users where name=_name and password=_pass;
     if val<1 then
 		set _res =-1;
     else

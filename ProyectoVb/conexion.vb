@@ -5,7 +5,7 @@ Imports Mysqlx
 
 Public Class conexion
     Private MySqlCommand As New MySqlCommand
-    Dim MySqlConnString As String = "server=localhost;port=3309;database=vbdatabase;user=root; password=joyfe"
+    Dim MySqlConnString As String = "server=localhost;port=3306;database=vbdatabase;user=root; password=1234"
     Public MysqlConexion As MySqlConnection = New MySqlConnection(MySqlConnString)
     Public Sub Probarconexion()
         Try
@@ -13,8 +13,13 @@ Public Class conexion
             MsgBox("la conexión fue exitosa")
             MysqlConexion.Close()
         Catch ex As Exception
-            Dim scriptFilePath As String = "C:\Users\DAM2B-09\source\repos\ProyectoVb\ProyectoVb\scriptSql\vbdatabase.sql"
-            MySqlConnString = "server=localhost;port=3309;user=root; password=joyfe"
+            Dim appDirectory As String = Application.StartupPath
+            Dim parentDirectory As DirectoryInfo = Directory.GetParent(appDirectory)
+            parentDirectory = Directory.GetParent(parentDirectory.FullName)
+            parentDirectory = Directory.GetParent(parentDirectory.FullName)
+            parentDirectory = Directory.GetParent(parentDirectory.FullName)
+            Dim scriptFilePath As String = Path.Combine(parentDirectory.FullName, "scriptSql\vbdatabase.sql")
+            MySqlConnString = "server=localhost;port=3306;user=root; password=1234"
             MysqlConexion = New MySqlConnection(MySqlConnString)
             MysqlConexion.Open()
             Dim script As String = File.ReadAllText(scriptFilePath)
