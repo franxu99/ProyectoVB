@@ -23,16 +23,22 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         btn = New Button()
-        Button1 = New Button()
+        btnRegistro = New Button()
         btnInicioSesion = New Button()
         GroupBox1 = New GroupBox()
+        btnCompletarReg = New Button()
+        lblEmailReg = New Label()
+        tbEmailReg = New TextBox()
+        tbPswReg = New TextBox()
+        tbNameReg = New TextBox()
+        lblTitle = New Label()
+        tbRecPsw = New TextBox()
+        btnRecPsw = New Button()
         Label2 = New Label()
         Label1 = New Label()
         tbPswLog = New TextBox()
         tbNameLog = New TextBox()
         GroupBox2 = New GroupBox()
-        btnRecPsw = New Button()
-        tbRecPsw = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -48,18 +54,18 @@ Partial Class Form1
         btn.Text = "Conexion BBDD"
         btn.UseVisualStyleBackColor = False
         ' 
-        ' Button1
+        ' btnRegistro
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
-        Button1.Cursor = Cursors.Hand
-        Button1.Font = New Font("Palatino Linotype", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.Black
-        Button1.Location = New Point(177, 345)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(134, 44)
-        Button1.TabIndex = 1
-        Button1.Text = "REGISTRARSE"
-        Button1.UseVisualStyleBackColor = False
+        btnRegistro.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
+        btnRegistro.Cursor = Cursors.Hand
+        btnRegistro.Font = New Font("Palatino Linotype", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnRegistro.ForeColor = Color.Black
+        btnRegistro.Location = New Point(177, 345)
+        btnRegistro.Name = "btnRegistro"
+        btnRegistro.Size = New Size(134, 44)
+        btnRegistro.TabIndex = 1
+        btnRegistro.Text = "REGISTRARSE"
+        btnRegistro.UseVisualStyleBackColor = False
         ' 
         ' btnInicioSesion
         ' 
@@ -78,19 +84,95 @@ Partial Class Form1
         ' GroupBox1
         ' 
         GroupBox1.BackColor = Color.SandyBrown
+        GroupBox1.Controls.Add(btnCompletarReg)
+        GroupBox1.Controls.Add(lblEmailReg)
+        GroupBox1.Controls.Add(tbEmailReg)
+        GroupBox1.Controls.Add(tbPswReg)
+        GroupBox1.Controls.Add(tbNameReg)
+        GroupBox1.Controls.Add(lblTitle)
         GroupBox1.Controls.Add(tbRecPsw)
         GroupBox1.Controls.Add(btnRecPsw)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(tbPswLog)
         GroupBox1.Controls.Add(tbNameLog)
-        GroupBox1.Controls.Add(Button1)
+        GroupBox1.Controls.Add(btnRegistro)
         GroupBox1.Controls.Add(btnInicioSesion)
         GroupBox1.Location = New Point(218, 23)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(334, 409)
         GroupBox1.TabIndex = 3
         GroupBox1.TabStop = False
+        ' 
+        ' btnCompletarReg
+        ' 
+        btnCompletarReg.Location = New Point(121, 297)
+        btnCompletarReg.Name = "btnCompletarReg"
+        btnCompletarReg.Size = New Size(94, 42)
+        btnCompletarReg.TabIndex = 14
+        btnCompletarReg.Text = "Registrar"
+        btnCompletarReg.UseVisualStyleBackColor = True
+        btnCompletarReg.Visible = False
+        ' 
+        ' lblEmailReg
+        ' 
+        lblEmailReg.AutoSize = True
+        lblEmailReg.Location = New Point(63, 212)
+        lblEmailReg.Name = "lblEmailReg"
+        lblEmailReg.Size = New Size(36, 15)
+        lblEmailReg.TabIndex = 13
+        lblEmailReg.Text = "Email"
+        lblEmailReg.Visible = False
+        ' 
+        ' tbEmailReg
+        ' 
+        tbEmailReg.Location = New Point(157, 209)
+        tbEmailReg.Name = "tbEmailReg"
+        tbEmailReg.Size = New Size(130, 23)
+        tbEmailReg.TabIndex = 12
+        tbEmailReg.Visible = False
+        ' 
+        ' tbPswReg
+        ' 
+        tbPswReg.Location = New Point(157, 156)
+        tbPswReg.Name = "tbPswReg"
+        tbPswReg.Size = New Size(130, 23)
+        tbPswReg.TabIndex = 11
+        tbPswReg.Visible = False
+        ' 
+        ' tbNameReg
+        ' 
+        tbNameReg.Location = New Point(157, 89)
+        tbNameReg.Name = "tbNameReg"
+        tbNameReg.Size = New Size(130, 23)
+        tbNameReg.TabIndex = 10
+        tbNameReg.Visible = False
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.AutoSize = True
+        lblTitle.Font = New Font("Segoe UI", 20F)
+        lblTitle.Location = New Point(88, 19)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(165, 37)
+        lblTitle.TabIndex = 9
+        lblTitle.Text = "Inicio Sesión"
+        ' 
+        ' tbRecPsw
+        ' 
+        tbRecPsw.Location = New Point(88, 223)
+        tbRecPsw.Name = "tbRecPsw"
+        tbRecPsw.Size = New Size(156, 23)
+        tbRecPsw.TabIndex = 8
+        ' 
+        ' btnRecPsw
+        ' 
+        btnRecPsw.Location = New Point(88, 268)
+        btnRecPsw.Name = "btnRecPsw"
+        btnRecPsw.Size = New Size(156, 23)
+        btnRecPsw.TabIndex = 7
+        btnRecPsw.Text = "Recuperar Contraseña"
+        btnRecPsw.UseVisualStyleBackColor = True
         ' 
         ' Label2
         ' 
@@ -104,7 +186,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(63, 72)
+        Label1.Location = New Point(63, 93)
         Label1.Name = "Label1"
         Label1.Size = New Size(47, 15)
         Label1.TabIndex = 5
@@ -119,7 +201,7 @@ Partial Class Form1
         ' 
         ' tbNameLog
         ' 
-        tbNameLog.Location = New Point(157, 69)
+        tbNameLog.Location = New Point(157, 90)
         tbNameLog.Name = "tbNameLog"
         tbNameLog.Size = New Size(130, 23)
         tbNameLog.TabIndex = 3
@@ -132,22 +214,6 @@ Partial Class Form1
         GroupBox2.Size = New Size(357, 432)
         GroupBox2.TabIndex = 4
         GroupBox2.TabStop = False
-        ' 
-        ' btnRecPsw
-        ' 
-        btnRecPsw.Location = New Point(88, 268)
-        btnRecPsw.Name = "btnRecPsw"
-        btnRecPsw.Size = New Size(156, 23)
-        btnRecPsw.TabIndex = 7
-        btnRecPsw.Text = "Recuperar Contraseña"
-        btnRecPsw.UseVisualStyleBackColor = True
-        ' 
-        ' tbRecPsw
-        ' 
-        tbRecPsw.Location = New Point(88, 223)
-        tbRecPsw.Name = "tbRecPsw"
-        tbRecPsw.Size = New Size(156, 23)
-        tbRecPsw.TabIndex = 8
         ' 
         ' Form1
         ' 
@@ -166,7 +232,7 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents btn As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegistro As Button
     Friend WithEvents btnInicioSesion As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
@@ -176,5 +242,11 @@ Partial Class Form1
     Friend WithEvents tbNameLog As TextBox
     Friend WithEvents btnRecPsw As Button
     Friend WithEvents tbRecPsw As TextBox
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents tbEmailReg As TextBox
+    Friend WithEvents tbPswReg As TextBox
+    Friend WithEvents tbNameReg As TextBox
+    Friend WithEvents lblEmailReg As Label
+    Friend WithEvents btnCompletarReg As Button
 
 End Class

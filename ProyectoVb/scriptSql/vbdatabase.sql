@@ -42,16 +42,26 @@ values("User","1234",3);
 Procedimiento que añade un nuevo registro en la tabla 'users'
 */
 
+DROP PROCEDURE IF EXISTS getAllUsers;
+
+-- Create the procedure
+create procedure getAllUsers()
+begin
+    -- Select all columns from the users table
+    select *
+    from users;
+end;
+
 drop procedure if exists addUser; 
 
-create procedure addUser(in _name varchar(255),in _pass varchar(255),out _res int)
+create procedure addUser(in _name varchar(255),in _pass varchar(255), in _email varchar(255), in _status varchar(20), in _last_login DATETIME, in _id_rol int, out _res int)
 begin
 	declare val int default 0;
     set _res= -99;
 	select count(*) into val from users where name=_name;
     if val<1 then
-		insert into users (name,password)
-		values(_name,_pass);
+		insert into users (name, password, email, status, last_login, id_rol)
+		values(_name, _pass, _email, _status, _last_login, _id_rol);
         set _res =1;
     else
     set _res =-1; 
