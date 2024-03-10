@@ -87,11 +87,13 @@ Public Class Form1
         tbPswLog.Visible = False
         tbRecPsw.Visible = False
         btnRecPsw.Visible = False
-        lblTitle.Text = "Registro"
+        lblTitle.Text = "REGISTRO"
         lblEmailReg.Visible = True
         tbNameReg.Visible = True
         tbPswReg.Visible = True
         tbEmailReg.Visible = True
+        'imgGmail.Visible = True
+        'imgUser.Visible = True
         btnCompletarReg.Visible = True
         limpiarCampos()
     End Sub
@@ -100,12 +102,94 @@ Public Class Form1
         tbPswLog.Visible = True
         tbRecPsw.Visible = True
         btnRecPsw.Visible = True
-        lblTitle.Text = "Iniciar Sesion"
-        lblEmailReg.Visible = False
+        lblTitle.Text = "LOG IN"
+        lblEmailReg.Visible = True
         tbNameReg.Visible = False
         tbPswReg.Visible = False
-        tbEmailReg.Visible = False
+        tbEmailReg.Visible = True
+        'imgGmail.Visible = False
+        'imgUser.Visible = False
         btnCompletarReg.Visible = False
         limpiarCampos()
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tbNameLog.Text = "Nombre"
+        tbNameLog.ForeColor = Color.DarkGray
+
+        tbPswLog.Text = "Contraseña"
+        tbPswLog.ForeColor = Color.DarkGray
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles tbNameLog.TextChanged
+
+    End Sub
+
+    '########### log ##########
+
+    Private Sub tbNameLog_GotFocus(sender As Object, e As EventArgs) Handles tbNameLog.GotFocus
+        If tbNameLog.Text = "Nombre" Then
+            tbNameLog.Text = ""
+            tbNameLog.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub tbNameLog_LostFocus(sender As Object, e As EventArgs) Handles tbNameLog.LostFocus
+        If tbNameLog.Text = "" Then
+            tbNameLog.Text = "Nombre"
+            tbNameLog.ForeColor = Color.DarkGray
+        End If
+    End Sub
+
+    Private Sub tbPswLog_GotFocus(sender As Object, e As EventArgs) Handles tbPswLog.GotFocus
+        If tbPswLog.Text = "Contraseña" Then
+            tbPswLog.Text = ""
+            tbPswLog.PasswordChar = "•"
+            tbPswLog.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub tbPswLog_LostFocus(sender As Object, e As EventArgs) Handles tbPswLog.LostFocus
+        If tbPswLog.Text = "" Then
+            tbPswLog.Text = "Contraseña"
+            tbPswLog.PasswordChar = ""
+            tbPswLog.ForeColor = Color.DarkGray
+        End If
+    End Sub
+
+    '########### reg ##########
+
+    Private Sub tbNameReg_GotFocus(sender As Object, e As EventArgs)
+        If tbNameReg.Text = "Nombre" Then
+            tbNameReg.Text = ""
+            tbNameReg.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub tbNameReg_LostFocus(sender As Object, e As EventArgs)
+        If tbNameReg.Text = "" Then
+            tbNameReg.Text = "Nombre"
+            tbNameReg.ForeColor = Color.DarkGray
+        End If
+    End Sub
+
+    Private Sub tbPswReg_GotFocus(sender As Object, e As EventArgs)
+        If tbPswReg.Text = "Contraseña" Then
+            tbPswReg.Text = ""
+            tbPswReg.PasswordChar = "•"
+            tbPswReg.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub tbPswReg_LostFocus(sender As Object, e As EventArgs)
+        If tbPswReg.Text = "" Then
+            tbPswReg.Text = "Contraseña"
+            tbPswReg.PasswordChar = ""
+            tbPswReg.ForeColor = Color.DarkGray
+        End If
     End Sub
 End Class

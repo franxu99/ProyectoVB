@@ -2011,19 +2011,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\franl\\.nuget\\packages\\": {}
+    "C:\\Users\\xxelm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\franl\\OneDrive\\Escritorio\\proyectoVb\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
+      "projectUniqueName": "D:\\Reporsitorios\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
       "projectName": "ProyectoVb",
-      "projectPath": "C:\\Users\\franl\\OneDrive\\Escritorio\\proyectoVb\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
-      "packagesPath": "C:\\Users\\franl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\franl\\OneDrive\\Escritorio\\proyectoVb\\ProyectoVB\\ProyectoVb\\obj\\",
+      "projectPath": "D:\\Reporsitorios\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
+      "packagesPath": "C:\\Users\\xxelm\\.nuget\\packages\\",
+      "outputPath": "D:\\Reporsitorios\\ProyectoVB\\ProyectoVb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\franl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\xxelm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

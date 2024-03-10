@@ -22,24 +22,33 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         btn = New Button()
         btnRegistro = New Button()
         btnInicioSesion = New Button()
         GroupBox1 = New GroupBox()
         btnCompletarReg = New Button()
+        tbNameReg = New TextBox()
+        imgUser = New PictureBox()
+        tbNameLog = New TextBox()
+        imgGmail = New PictureBox()
+        imgPass = New PictureBox()
         lblEmailReg = New Label()
         tbEmailReg = New TextBox()
+        PictureBox1 = New PictureBox()
+        tbPswLog = New TextBox()
         tbPswReg = New TextBox()
-        tbNameReg = New TextBox()
+        Label1 = New Label()
         lblTitle = New Label()
+        Label2 = New Label()
         tbRecPsw = New TextBox()
         btnRecPsw = New Button()
-        Label2 = New Label()
-        Label1 = New Label()
-        tbPswLog = New TextBox()
-        tbNameLog = New TextBox()
         GroupBox2 = New GroupBox()
         GroupBox1.SuspendLayout()
+        CType(imgUser, ComponentModel.ISupportInitialize).BeginInit()
+        CType(imgGmail, ComponentModel.ISupportInitialize).BeginInit()
+        CType(imgPass, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btn
@@ -56,26 +65,26 @@ Partial Class Form1
         ' 
         ' btnRegistro
         ' 
-        btnRegistro.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
+        btnRegistro.BackColor = Color.DarkSlateGray
         btnRegistro.Cursor = Cursors.Hand
-        btnRegistro.Font = New Font("Palatino Linotype", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnRegistro.ForeColor = Color.Black
-        btnRegistro.Location = New Point(177, 345)
+        btnRegistro.Font = New Font("Century Gothic", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnRegistro.ForeColor = Color.White
+        btnRegistro.Location = New Point(167, 308)
         btnRegistro.Name = "btnRegistro"
-        btnRegistro.Size = New Size(134, 44)
+        btnRegistro.Size = New Size(145, 36)
         btnRegistro.TabIndex = 1
         btnRegistro.Text = "REGISTRARSE"
         btnRegistro.UseVisualStyleBackColor = False
         ' 
         ' btnInicioSesion
         ' 
-        btnInicioSesion.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
+        btnInicioSesion.BackColor = Color.DarkSlateGray
         btnInicioSesion.Cursor = Cursors.Hand
-        btnInicioSesion.Font = New Font("Palatino Linotype", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnInicioSesion.ForeColor = SystemColors.ActiveCaptionText
-        btnInicioSesion.Location = New Point(20, 345)
+        btnInicioSesion.Font = New Font("Century Gothic", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnInicioSesion.ForeColor = Color.White
+        btnInicioSesion.Location = New Point(24, 308)
         btnInicioSesion.Name = "btnInicioSesion"
-        btnInicioSesion.Size = New Size(138, 44)
+        btnInicioSesion.Size = New Size(134, 36)
         btnInicioSesion.TabIndex = 2
         btnInicioSesion.Text = "LOG IN"
         btnInicioSesion.TextImageRelation = TextImageRelation.ImageAboveText
@@ -83,21 +92,25 @@ Partial Class Form1
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.BackColor = Color.SandyBrown
+        GroupBox1.BackColor = Color.AliceBlue
         GroupBox1.Controls.Add(btnCompletarReg)
+        GroupBox1.Controls.Add(tbNameReg)
+        GroupBox1.Controls.Add(imgUser)
+        GroupBox1.Controls.Add(tbNameLog)
+        GroupBox1.Controls.Add(imgGmail)
+        GroupBox1.Controls.Add(btnInicioSesion)
+        GroupBox1.Controls.Add(imgPass)
+        GroupBox1.Controls.Add(btnRegistro)
         GroupBox1.Controls.Add(lblEmailReg)
         GroupBox1.Controls.Add(tbEmailReg)
+        GroupBox1.Controls.Add(PictureBox1)
+        GroupBox1.Controls.Add(tbPswLog)
         GroupBox1.Controls.Add(tbPswReg)
-        GroupBox1.Controls.Add(tbNameReg)
+        GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(lblTitle)
+        GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(tbRecPsw)
         GroupBox1.Controls.Add(btnRecPsw)
-        GroupBox1.Controls.Add(Label2)
-        GroupBox1.Controls.Add(Label1)
-        GroupBox1.Controls.Add(tbPswLog)
-        GroupBox1.Controls.Add(tbNameLog)
-        GroupBox1.Controls.Add(btnRegistro)
-        GroupBox1.Controls.Add(btnInicioSesion)
         GroupBox1.Location = New Point(218, 23)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(334, 409)
@@ -106,109 +119,166 @@ Partial Class Form1
         ' 
         ' btnCompletarReg
         ' 
-        btnCompletarReg.Location = New Point(121, 297)
+        btnCompletarReg.BackColor = Color.DarkSlateGray
+        btnCompletarReg.Font = New Font("Century Gothic", 11F, FontStyle.Bold)
+        btnCompletarReg.ForeColor = Color.White
+        btnCompletarReg.Location = New Point(60, 350)
         btnCompletarReg.Name = "btnCompletarReg"
-        btnCompletarReg.Size = New Size(94, 42)
+        btnCompletarReg.Size = New Size(226, 44)
         btnCompletarReg.TabIndex = 14
-        btnCompletarReg.Text = "Registrar"
-        btnCompletarReg.UseVisualStyleBackColor = True
+        btnCompletarReg.Text = "COMPLETAR REGISTRO"
+        btnCompletarReg.UseVisualStyleBackColor = False
         btnCompletarReg.Visible = False
+        ' 
+        ' tbNameReg
+        ' 
+        tbNameReg.BackColor = Color.AliceBlue
+        tbNameReg.Location = New Point(139, 174)
+        tbNameReg.Name = "tbNameReg"
+        tbNameReg.Size = New Size(130, 23)
+        tbNameReg.TabIndex = 10
+        tbNameReg.Visible = False
+        ' 
+        ' imgUser
+        ' 
+        imgUser.Image = CType(resources.GetObject("imgUser.Image"), Image)
+        imgUser.Location = New Point(39, 174)
+        imgUser.Name = "imgUser"
+        imgUser.Size = New Size(20, 19)
+        imgUser.SizeMode = PictureBoxSizeMode.StretchImage
+        imgUser.TabIndex = 15
+        imgUser.TabStop = False
+        ' 
+        ' tbNameLog
+        ' 
+        tbNameLog.BackColor = Color.AliceBlue
+        tbNameLog.Location = New Point(139, 174)
+        tbNameLog.Name = "tbNameLog"
+        tbNameLog.Size = New Size(130, 23)
+        tbNameLog.TabIndex = 3
+        ' 
+        ' imgGmail
+        ' 
+        imgGmail.Image = CType(resources.GetObject("imgGmail.Image"), Image)
+        imgGmail.Location = New Point(39, 265)
+        imgGmail.Name = "imgGmail"
+        imgGmail.Size = New Size(20, 19)
+        imgGmail.SizeMode = PictureBoxSizeMode.StretchImage
+        imgGmail.TabIndex = 17
+        imgGmail.TabStop = False
+        ' 
+        ' imgPass
+        ' 
+        imgPass.Image = CType(resources.GetObject("imgPass.Image"), Image)
+        imgPass.Location = New Point(39, 222)
+        imgPass.Name = "imgPass"
+        imgPass.Size = New Size(20, 19)
+        imgPass.SizeMode = PictureBoxSizeMode.StretchImage
+        imgPass.TabIndex = 16
+        imgPass.TabStop = False
         ' 
         ' lblEmailReg
         ' 
         lblEmailReg.AutoSize = True
-        lblEmailReg.Location = New Point(63, 212)
+        lblEmailReg.Font = New Font("Century Gothic", 11F)
+        lblEmailReg.Location = New Point(66, 264)
         lblEmailReg.Name = "lblEmailReg"
-        lblEmailReg.Size = New Size(36, 15)
+        lblEmailReg.Size = New Size(46, 20)
         lblEmailReg.TabIndex = 13
         lblEmailReg.Text = "Email"
         lblEmailReg.Visible = False
         ' 
         ' tbEmailReg
         ' 
-        tbEmailReg.Location = New Point(157, 209)
+        tbEmailReg.BackColor = Color.AliceBlue
+        tbEmailReg.Location = New Point(118, 264)
         tbEmailReg.Name = "tbEmailReg"
         tbEmailReg.Size = New Size(130, 23)
         tbEmailReg.TabIndex = 12
         tbEmailReg.Visible = False
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(118, 11)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(103, 127)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 10
+        PictureBox1.TabStop = False
+        ' 
+        ' tbPswLog
+        ' 
+        tbPswLog.BackColor = Color.AliceBlue
+        tbPswLog.Location = New Point(161, 218)
+        tbPswLog.Name = "tbPswLog"
+        tbPswLog.Size = New Size(130, 23)
+        tbPswLog.TabIndex = 4
+        ' 
         ' tbPswReg
         ' 
-        tbPswReg.Location = New Point(157, 156)
+        tbPswReg.BackColor = Color.AliceBlue
+        tbPswReg.Location = New Point(161, 218)
         tbPswReg.Name = "tbPswReg"
         tbPswReg.Size = New Size(130, 23)
         tbPswReg.TabIndex = 11
         tbPswReg.Visible = False
         ' 
-        ' tbNameReg
+        ' Label1
         ' 
-        tbNameReg.Location = New Point(157, 89)
-        tbNameReg.Name = "tbNameReg"
-        tbNameReg.Size = New Size(130, 23)
-        tbNameReg.TabIndex = 10
-        tbNameReg.Visible = False
+        Label1.AutoSize = True
+        Label1.Font = New Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(66, 174)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(63, 20)
+        Label1.TabIndex = 5
+        Label1.Text = "Usuario"
         ' 
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Segoe UI", 20F)
-        lblTitle.Location = New Point(88, 19)
+        lblTitle.Font = New Font("Century Gothic", 14F)
+        lblTitle.Location = New Point(130, 143)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(165, 37)
+        lblTitle.Size = New Size(77, 22)
         lblTitle.TabIndex = 9
-        lblTitle.Text = "Inicio Sesión"
-        ' 
-        ' tbRecPsw
-        ' 
-        tbRecPsw.Location = New Point(88, 223)
-        tbRecPsw.Name = "tbRecPsw"
-        tbRecPsw.Size = New Size(156, 23)
-        tbRecPsw.TabIndex = 8
-        ' 
-        ' btnRecPsw
-        ' 
-        btnRecPsw.Location = New Point(88, 268)
-        btnRecPsw.Name = "btnRecPsw"
-        btnRecPsw.Size = New Size(156, 23)
-        btnRecPsw.TabIndex = 7
-        btnRecPsw.Text = "Recuperar Contraseña"
-        btnRecPsw.UseVisualStyleBackColor = True
+        lblTitle.Text = "LOG IN"
+        lblTitle.TextAlign = ContentAlignment.TopCenter
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(63, 159)
+        Label2.Font = New Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(60, 221)
         Label2.Name = "Label2"
-        Label2.Size = New Size(67, 15)
+        Label2.Size = New Size(95, 20)
         Label2.TabIndex = 6
         Label2.Text = "Contraseña"
         ' 
-        ' Label1
+        ' tbRecPsw
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(63, 93)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(47, 15)
-        Label1.TabIndex = 5
-        Label1.Text = "Usuario"
+        tbRecPsw.BackColor = Color.White
+        tbRecPsw.Location = New Point(198, 371)
+        tbRecPsw.Name = "tbRecPsw"
+        tbRecPsw.Size = New Size(114, 23)
+        tbRecPsw.TabIndex = 8
         ' 
-        ' tbPswLog
+        ' btnRecPsw
         ' 
-        tbPswLog.Location = New Point(157, 156)
-        tbPswLog.Name = "tbPswLog"
-        tbPswLog.Size = New Size(130, 23)
-        tbPswLog.TabIndex = 4
-        ' 
-        ' tbNameLog
-        ' 
-        tbNameLog.Location = New Point(157, 90)
-        tbNameLog.Name = "tbNameLog"
-        tbNameLog.Size = New Size(130, 23)
-        tbNameLog.TabIndex = 3
+        btnRecPsw.BackColor = Color.DarkSlateGray
+        btnRecPsw.Font = New Font("Century Gothic", 10F)
+        btnRecPsw.ForeColor = Color.White
+        btnRecPsw.Location = New Point(6, 361)
+        btnRecPsw.Name = "btnRecPsw"
+        btnRecPsw.Size = New Size(322, 42)
+        btnRecPsw.TabIndex = 7
+        btnRecPsw.Text = " Recuperar Contraseña : "
+        btnRecPsw.TextAlign = ContentAlignment.MiddleLeft
+        btnRecPsw.UseVisualStyleBackColor = False
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.BackColor = Color.FromArgb(CByte(128), CByte(64), CByte(0))
+        GroupBox2.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
         GroupBox2.Location = New Point(207, 12)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Size = New Size(357, 432)
@@ -219,15 +289,20 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.SandyBrown
+        BackColor = Color.DarkSlateGray
         ClientSize = New Size(800, 450)
         Controls.Add(btn)
         Controls.Add(GroupBox1)
         Controls.Add(GroupBox2)
+        ForeColor = SystemColors.ActiveCaptionText
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        CType(imgUser, ComponentModel.ISupportInitialize).EndInit()
+        CType(imgGmail, ComponentModel.ISupportInitialize).EndInit()
+        CType(imgPass, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -239,14 +314,18 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents tbPswLog As TextBox
-    Friend WithEvents tbNameLog As TextBox
     Friend WithEvents btnRecPsw As Button
     Friend WithEvents tbRecPsw As TextBox
-    Friend WithEvents lblTitle As Label
     Friend WithEvents tbEmailReg As TextBox
     Friend WithEvents tbPswReg As TextBox
-    Friend WithEvents tbNameReg As TextBox
     Friend WithEvents lblEmailReg As Label
     Friend WithEvents btnCompletarReg As Button
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents imgUser As PictureBox
+    Friend WithEvents imgPass As PictureBox
+    Friend WithEvents imgGmail As PictureBox
+    Friend WithEvents tbNameReg As TextBox
+    Friend WithEvents tbNameLog As TextBox
 
 End Class
