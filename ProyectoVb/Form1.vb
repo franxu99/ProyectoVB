@@ -92,7 +92,7 @@ Public Class Form1
         tbNameReg.Visible = True
         tbPswReg.Visible = True
         tbEmailReg.Visible = True
-        'imgGmail.Visible = True
+        imgGmail.Visible = True
         'imgUser.Visible = True
         btnCompletarReg.Visible = True
         limpiarCampos()
@@ -107,7 +107,7 @@ Public Class Form1
         tbNameReg.Visible = False
         tbPswReg.Visible = False
         tbEmailReg.Visible = True
-        'imgGmail.Visible = False
+        imgGmail.Visible = False
         'imgUser.Visible = False
         btnCompletarReg.Visible = False
         limpiarCampos()

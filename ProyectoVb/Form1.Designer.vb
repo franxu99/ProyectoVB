@@ -27,6 +27,7 @@ Partial Class Form1
         btnRegistro = New Button()
         btnInicioSesion = New Button()
         GroupBox1 = New GroupBox()
+        PictureBox4 = New PictureBox()
         btnCompletarReg = New Button()
         tbNameReg = New TextBox()
         imgUser = New PictureBox()
@@ -43,12 +44,17 @@ Partial Class Form1
         Label2 = New Label()
         tbRecPsw = New TextBox()
         btnRecPsw = New Button()
+        PictureBox3 = New PictureBox()
+        PictureBox2 = New PictureBox()
         GroupBox2 = New GroupBox()
         GroupBox1.SuspendLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(imgUser, ComponentModel.ISupportInitialize).BeginInit()
         CType(imgGmail, ComponentModel.ISupportInitialize).BeginInit()
         CType(imgPass, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btn
@@ -92,7 +98,8 @@ Partial Class Form1
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.BackColor = Color.AliceBlue
+        GroupBox1.BackColor = SystemColors.ButtonFace
+        GroupBox1.Controls.Add(PictureBox4)
         GroupBox1.Controls.Add(btnCompletarReg)
         GroupBox1.Controls.Add(tbNameReg)
         GroupBox1.Controls.Add(imgUser)
@@ -111,11 +118,23 @@ Partial Class Form1
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(tbRecPsw)
         GroupBox1.Controls.Add(btnRecPsw)
+        GroupBox1.Controls.Add(PictureBox3)
         GroupBox1.Location = New Point(218, 23)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(334, 409)
         GroupBox1.TabIndex = 3
         GroupBox1.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackColor = SystemColors.ButtonHighlight
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(286, -23)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(70, 81)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 18
+        PictureBox4.TabStop = False
         ' 
         ' btnCompletarReg
         ' 
@@ -166,6 +185,7 @@ Partial Class Form1
         imgGmail.SizeMode = PictureBoxSizeMode.StretchImage
         imgGmail.TabIndex = 17
         imgGmail.TabStop = False
+        imgGmail.Visible = False
         ' 
         ' imgPass
         ' 
@@ -276,9 +296,32 @@ Partial Class Form1
         btnRecPsw.TextAlign = ContentAlignment.MiddleLeft
         btnRecPsw.UseVisualStyleBackColor = False
         ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = SystemColors.ButtonHighlight
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(-11, -23)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(70, 81)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 6
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Dock = DockStyle.Fill
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(0, 0)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(800, 450)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 5
+        PictureBox2.TabStop = False
+        ' 
         ' GroupBox2
         ' 
         GroupBox2.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
+        GroupBox2.BackgroundImage = CType(resources.GetObject("GroupBox2.BackgroundImage"), Image)
         GroupBox2.Location = New Point(207, 12)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Size = New Size(357, 432)
@@ -294,15 +337,19 @@ Partial Class Form1
         Controls.Add(btn)
         Controls.Add(GroupBox1)
         Controls.Add(GroupBox2)
+        Controls.Add(PictureBox2)
         ForeColor = SystemColors.ActiveCaptionText
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(imgUser, ComponentModel.ISupportInitialize).EndInit()
         CType(imgGmail, ComponentModel.ISupportInitialize).EndInit()
         CType(imgPass, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -310,7 +357,6 @@ Partial Class Form1
     Friend WithEvents btnRegistro As Button
     Friend WithEvents btnInicioSesion As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents tbPswLog As TextBox
@@ -327,5 +373,9 @@ Partial Class Form1
     Friend WithEvents imgGmail As PictureBox
     Friend WithEvents tbNameReg As TextBox
     Friend WithEvents tbNameLog As TextBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents PictureBox4 As PictureBox
 
 End Class
