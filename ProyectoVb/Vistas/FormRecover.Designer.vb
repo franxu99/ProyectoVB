@@ -33,59 +33,59 @@ Partial Class FormRecover
         Label3 = New Label()
         Label4 = New Label()
         Panel1 = New Panel()
+        PictureBox5 = New PictureBox()
+        imgPass = New PictureBox()
+        PictureBox4 = New PictureBox()
+        imgGmail = New PictureBox()
         PictureBox3 = New PictureBox()
         Label5 = New Label()
         PictureBox1 = New PictureBox()
         GroupBox1 = New GroupBox()
         GroupBox2 = New GroupBox()
         PictureBox2 = New PictureBox()
-        imgGmail = New PictureBox()
-        PictureBox4 = New PictureBox()
-        imgPass = New PictureBox()
-        PictureBox5 = New PictureBox()
         Panel1.SuspendLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(imgPass, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(imgGmail, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox2.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(imgGmail, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(imgPass, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TxtEmail
         ' 
         TxtEmail.BackColor = Color.AliceBlue
-        TxtEmail.Location = New Point(79, 134)
+        TxtEmail.Location = New Point(76, 128)
         TxtEmail.Name = "TxtEmail"
-        TxtEmail.Size = New Size(206, 23)
+        TxtEmail.Size = New Size(205, 23)
         TxtEmail.TabIndex = 0
         ' 
         ' TxtCode
         ' 
         TxtCode.BackColor = Color.AliceBlue
-        TxtCode.Location = New Point(45, 159)
+        TxtCode.Location = New Point(42, 153)
         TxtCode.Name = "TxtCode"
-        TxtCode.Size = New Size(207, 23)
+        TxtCode.Size = New Size(205, 23)
         TxtCode.TabIndex = 1
         ' 
         ' TxtPass1
         ' 
         TxtPass1.BackColor = Color.AliceBlue
-        TxtPass1.Location = New Point(79, 233)
+        TxtPass1.Location = New Point(76, 227)
         TxtPass1.Name = "TxtPass1"
         TxtPass1.PasswordChar = "*"c
-        TxtPass1.Size = New Size(207, 23)
+        TxtPass1.Size = New Size(205, 23)
         TxtPass1.TabIndex = 2
         ' 
         ' TxtPass2
         ' 
         TxtPass2.BackColor = Color.AliceBlue
-        TxtPass2.Location = New Point(79, 282)
+        TxtPass2.Location = New Point(76, 276)
         TxtPass2.Name = "TxtPass2"
         TxtPass2.PasswordChar = "*"c
-        TxtPass2.Size = New Size(207, 23)
+        TxtPass2.Size = New Size(205, 23)
         TxtPass2.TabIndex = 3
         ' 
         ' BtnAction
@@ -94,9 +94,9 @@ Partial Class FormRecover
         BtnAction.Cursor = Cursors.Hand
         BtnAction.Font = New Font("Century Gothic", 11.0F, FontStyle.Bold)
         BtnAction.ForeColor = Color.White
-        BtnAction.Location = New Point(15, 290)
+        BtnAction.Location = New Point(20, 282)
         BtnAction.Name = "BtnAction"
-        BtnAction.Size = New Size(235, 44)
+        BtnAction.Size = New Size(230, 54)
         BtnAction.TabIndex = 4
         BtnAction.Text = "RESTABLECER CONTRASEÑA"
         BtnAction.UseVisualStyleBackColor = False
@@ -106,7 +106,7 @@ Partial Class FormRecover
         Label1.AutoSize = True
         Label1.BackColor = SystemColors.ButtonFace
         Label1.Font = New Font("Century Gothic", 9.0F)
-        Label1.Location = New Point(54, 113)
+        Label1.Location = New Point(54, 107)
         Label1.Name = "Label1"
         Label1.Size = New Size(120, 17)
         Label1.TabIndex = 5
@@ -116,7 +116,7 @@ Partial Class FormRecover
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 9.0F)
-        Label2.Location = New Point(20, 138)
+        Label2.Location = New Point(20, 132)
         Label2.Name = "Label2"
         Label2.Size = New Size(176, 17)
         Label2.TabIndex = 6
@@ -126,7 +126,7 @@ Partial Class FormRecover
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 9.0F)
-        Label3.Location = New Point(53, 214)
+        Label3.Location = New Point(53, 208)
         Label3.Name = "Label3"
         Label3.Size = New Size(77, 17)
         Label3.TabIndex = 7
@@ -136,7 +136,7 @@ Partial Class FormRecover
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 9.0F)
-        Label4.Location = New Point(54, 263)
+        Label4.Location = New Point(54, 257)
         Label4.Name = "Label4"
         Label4.Size = New Size(135, 17)
         Label4.TabIndex = 8
@@ -159,11 +159,51 @@ Partial Class FormRecover
         Panel1.Size = New Size(263, 345)
         Panel1.TabIndex = 10
         ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(20, 254)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(20, 19)
+        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox5.TabIndex = 22
+        PictureBox5.TabStop = False
+        ' 
+        ' imgPass
+        ' 
+        imgPass.Image = CType(resources.GetObject("imgPass.Image"), Image)
+        imgPass.Location = New Point(20, 206)
+        imgPass.Name = "imgPass"
+        imgPass.Size = New Size(20, 19)
+        imgPass.SizeMode = PictureBoxSizeMode.StretchImage
+        imgPass.TabIndex = 21
+        imgPass.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(20, 155)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(20, 20)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 20
+        PictureBox4.TabStop = False
+        ' 
+        ' imgGmail
+        ' 
+        imgGmail.Image = CType(resources.GetObject("imgGmail.Image"), Image)
+        imgGmail.Location = New Point(20, 107)
+        imgGmail.Name = "imgGmail"
+        imgGmail.Size = New Size(20, 19)
+        imgGmail.SizeMode = PictureBoxSizeMode.StretchImage
+        imgGmail.TabIndex = 18
+        imgGmail.TabStop = False
+        ' 
         ' PictureBox3
         ' 
         PictureBox3.BackColor = SystemColors.ButtonHighlight
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(-14, -14)
+        PictureBox3.Location = New Point(-6, -12)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(51, 59)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
@@ -176,7 +216,7 @@ Partial Class FormRecover
         Label5.BackColor = SystemColors.ButtonFace
         Label5.Font = New Font("Century Gothic", 12.0F, FontStyle.Bold)
         Label5.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Label5.Location = New Point(12, 60)
+        Label5.Location = New Point(19, 52)
         Label5.Name = "Label5"
         Label5.Size = New Size(204, 19)
         Label5.TabIndex = 13
@@ -185,9 +225,9 @@ Partial Class FormRecover
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(184, -14)
+        PictureBox1.Location = New Point(199, -8)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(90, 85)
+        PictureBox1.Size = New Size(73, 64)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 7
         PictureBox1.TabStop = False
@@ -224,47 +264,6 @@ Partial Class FormRecover
         PictureBox2.TabIndex = 12
         PictureBox2.TabStop = False
         ' 
-        ' imgGmail
-        ' 
-        imgGmail.Image = CType(resources.GetObject("imgGmail.Image"), Image)
-        imgGmail.Location = New Point(21, 113)
-        imgGmail.Name = "imgGmail"
-        imgGmail.Size = New Size(20, 19)
-        imgGmail.SizeMode = PictureBoxSizeMode.StretchImage
-        imgGmail.TabIndex = 18
-        imgGmail.TabStop = False
-        imgGmail.Visible = False
-        ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(23, 161)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(20, 20)
-        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox4.TabIndex = 20
-        PictureBox4.TabStop = False
-        ' 
-        ' imgPass
-        ' 
-        imgPass.Image = CType(resources.GetObject("imgPass.Image"), Image)
-        imgPass.Location = New Point(23, 212)
-        imgPass.Name = "imgPass"
-        imgPass.Size = New Size(20, 19)
-        imgPass.SizeMode = PictureBoxSizeMode.StretchImage
-        imgPass.TabIndex = 21
-        imgPass.TabStop = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(23, 260)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(20, 19)
-        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox5.TabIndex = 22
-        PictureBox5.TabStop = False
-        ' 
         ' FormRecover
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
@@ -283,14 +282,14 @@ Partial Class FormRecover
         Text = "FormRecover"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(imgPass, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(imgGmail, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox2.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(imgGmail, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(imgPass, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub

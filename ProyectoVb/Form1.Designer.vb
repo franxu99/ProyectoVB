@@ -129,7 +129,7 @@ Partial Class Form1
         ' 
         PictureBox4.BackColor = SystemColors.ButtonHighlight
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(286, -23)
+        PictureBox4.Location = New Point(269, -7)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(70, 81)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -300,7 +300,7 @@ Partial Class Form1
         ' 
         PictureBox3.BackColor = SystemColors.ButtonHighlight
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(-11, -23)
+        PictureBox3.Location = New Point(-19, -3)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(70, 81)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
