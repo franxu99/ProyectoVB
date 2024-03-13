@@ -14,7 +14,10 @@ Public Class Form1
     End Sub
 
     Private Sub iniciarSesion_Click(sender As Object, e As EventArgs) Handles btnInicioSesion.Click
-
+        If tbNameLog.Text = "" And tbPswLog.Text = "" Then
+            MessageBox.Show("Rellene los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         Dim name_user As String = tbNameLog.Text
         Dim psw As String = tbPswLog.Text
         Dim Val As Integer = manager.login(name_user, psw)
@@ -36,13 +39,16 @@ Public Class Form1
     Private Sub limpiarCampos()
         tbNameLog.Text = ""
         tbPswLog.Text = ""
+        tbNameReg.Text = ""
+        tbPswReg.Text = ""
+        tbEmailReg.Text = ""
+        tbRecPsw.Text = ""
     End Sub
 
     Private Sub btnRecPsw_Click(sender As Object, e As EventArgs) Handles btnRecPsw.Click
         Dim correo As String = tbRecPsw.Text
         If Not ValidarFormatoCorreo(correo) Then
             MessageBox.Show("El formato del correo no es correcto")
-            FormRecover.Show()
             Return
         End If
         manager.recovery(correo)
@@ -65,6 +71,10 @@ Public Class Form1
     End Sub
 
     Private Sub btnCompletarReg_Click(sender As Object, e As EventArgs) Handles btnCompletarReg.Click
+        If tbNameReg.Text = "" And tbPswReg.Text = "" Then
+            MessageBox.Show("Rellene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         Dim name_user As String = tbNameReg.Text
         Dim psw As String = tbPswReg.Text
         Dim email As String = tbEmailReg.Text
@@ -74,6 +84,7 @@ Public Class Form1
         End If
         Dim res As Integer = manager.registro(name_user, psw, email)
         If res > 0 Then
+            MessageBox.Show("Registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
             habilitarCamposLog()
             Return
         End If
@@ -85,7 +96,10 @@ Public Class Form1
         tbPswLog.Visible = False
         tbRecPsw.Visible = False
         btnRecPsw.Visible = False
+        btnInicioSesion.Visible = False
+        btnRegistro.Visible = False
         lblTitle.Text = "REGISTRO"
+        btnVolverReg.Visible = True
         lblEmailReg.Visible = True
         tbNameReg.Visible = True
         tbPswReg.Visible = True
@@ -100,11 +114,14 @@ Public Class Form1
         tbPswLog.Visible = True
         tbRecPsw.Visible = True
         btnRecPsw.Visible = True
+        btnInicioSesion.Visible = True
+        btnRegistro.Visible = True
         lblTitle.Text = "LOG IN"
-        lblEmailReg.Visible = True
+        lblEmailReg.Visible = False
+        btnVolverReg.Visible = False
         tbNameReg.Visible = False
         tbPswReg.Visible = False
-        tbEmailReg.Visible = True
+        tbEmailReg.Visible = False
         imgGmail.Visible = False
         'imgUser.Visible = False
         btnCompletarReg.Visible = False
@@ -139,7 +156,7 @@ Public Class Form1
     Private Sub tbNameLog_LostFocus(sender As Object, e As EventArgs) Handles tbNameLog.LostFocus
         If tbNameLog.Text = "" Then
             tbNameLog.Text = "Nombre"
-            tbNameLog.ForeColor = Color.DarkGray
+            tbNameLog.ForeColor = Color.Black
         End If
     End Sub
 
@@ -155,7 +172,7 @@ Public Class Form1
         If tbPswLog.Text = "" Then
             tbPswLog.Text = "Contraseña"
             tbPswLog.PasswordChar = ""
-            tbPswLog.ForeColor = Color.DarkGray
+            tbPswLog.ForeColor = Color.Black
         End If
     End Sub
 
@@ -186,9 +203,13 @@ Public Class Form1
     Private Sub tbPswReg_LostFocus(sender As Object, e As EventArgs)
         If tbPswReg.Text = "" Then
             tbPswReg.Text = "Contraseña"
-            tbPswReg.PasswordChar = ""
+            tbPswReg.PasswordChar = "•"
             tbPswReg.ForeColor = Color.DarkGray
         End If
     End Sub
 
+    Private Sub btnVolverReg_Click(sender As Object, e As EventArgs) Handles btnVolverReg.Click
+        limpiarCampos()
+        habilitarCamposLog()
+    End Sub
 End Class

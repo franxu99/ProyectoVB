@@ -47,6 +47,7 @@ Partial Class Form1
         PictureBox3 = New PictureBox()
         PictureBox2 = New PictureBox()
         GroupBox2 = New GroupBox()
+        btnVolverReg = New Button()
         GroupBox1.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(imgUser, ComponentModel.ISupportInitialize).BeginInit()
@@ -99,6 +100,7 @@ Partial Class Form1
         ' GroupBox1
         ' 
         GroupBox1.BackColor = SystemColors.ButtonFace
+        GroupBox1.Controls.Add(btnVolverReg)
         GroupBox1.Controls.Add(PictureBox4)
         GroupBox1.Controls.Add(btnCompletarReg)
         GroupBox1.Controls.Add(tbNameReg)
@@ -139,7 +141,7 @@ Partial Class Form1
         ' btnCompletarReg
         ' 
         btnCompletarReg.BackColor = Color.DarkSlateGray
-        btnCompletarReg.Font = New Font("Century Gothic", 11.0F, FontStyle.Bold)
+        btnCompletarReg.Font = New Font("Century Gothic", 11F, FontStyle.Bold)
         btnCompletarReg.ForeColor = Color.White
         btnCompletarReg.Location = New Point(60, 350)
         btnCompletarReg.Name = "btnCompletarReg"
@@ -200,7 +202,7 @@ Partial Class Form1
         ' lblEmailReg
         ' 
         lblEmailReg.AutoSize = True
-        lblEmailReg.Font = New Font("Century Gothic", 11.0F)
+        lblEmailReg.Font = New Font("Century Gothic", 11F)
         lblEmailReg.Location = New Point(66, 264)
         lblEmailReg.Name = "lblEmailReg"
         lblEmailReg.Size = New Size(46, 20)
@@ -232,6 +234,7 @@ Partial Class Form1
         tbPswLog.BackColor = Color.AliceBlue
         tbPswLog.Location = New Point(161, 218)
         tbPswLog.Name = "tbPswLog"
+        tbPswLog.PasswordChar = ChrW(&H25CF)
         tbPswLog.Size = New Size(130, 23)
         tbPswLog.TabIndex = 4
         ' 
@@ -240,6 +243,7 @@ Partial Class Form1
         tbPswReg.BackColor = Color.AliceBlue
         tbPswReg.Location = New Point(161, 218)
         tbPswReg.Name = "tbPswReg"
+        tbPswReg.PasswordChar = ChrW(&H25CF)
         tbPswReg.Size = New Size(130, 23)
         tbPswReg.TabIndex = 11
         tbPswReg.Visible = False
@@ -257,7 +261,7 @@ Partial Class Form1
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Century Gothic", 14.0F)
+        lblTitle.Font = New Font("Century Gothic", 14F)
         lblTitle.Location = New Point(130, 143)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(77, 22)
@@ -286,7 +290,7 @@ Partial Class Form1
         ' btnRecPsw
         ' 
         btnRecPsw.BackColor = Color.DarkSlateGray
-        btnRecPsw.Font = New Font("Century Gothic", 10.0F)
+        btnRecPsw.Font = New Font("Century Gothic", 10F)
         btnRecPsw.ForeColor = Color.White
         btnRecPsw.Location = New Point(6, 361)
         btnRecPsw.Name = "btnRecPsw"
@@ -328,9 +332,24 @@ Partial Class Form1
         GroupBox2.TabIndex = 4
         GroupBox2.TabStop = False
         ' 
+        ' btnVolverReg
+        ' 
+        btnVolverReg.BackColor = Color.DarkSlateGray
+        btnVolverReg.Cursor = Cursors.Hand
+        btnVolverReg.Font = New Font("Century Gothic", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnVolverReg.ForeColor = Color.White
+        btnVolverReg.Location = New Point(6, 11)
+        btnVolverReg.Name = "btnVolverReg"
+        btnVolverReg.Size = New Size(85, 36)
+        btnVolverReg.TabIndex = 20
+        btnVolverReg.Text = "VOLVER"
+        btnVolverReg.TextImageRelation = TextImageRelation.ImageAboveText
+        btnVolverReg.UseVisualStyleBackColor = False
+        btnVolverReg.Visible = False
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
         ClientSize = New Size(800, 552)
@@ -377,5 +396,6 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents btnVolverReg As Button
 
 End Class
