@@ -2011,19 +2011,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xxelm\\.nuget\\packages\\": {}
+    "C:\\Users\\JavierMG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Reporsitorios\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
+      "projectUniqueName": "C:\\Users\\JavierMG\\Desktop\\vb2\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
       "projectName": "ProyectoVb",
-      "projectPath": "D:\\Reporsitorios\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
-      "packagesPath": "C:\\Users\\xxelm\\.nuget\\packages\\",
-      "outputPath": "D:\\Reporsitorios\\ProyectoVB\\ProyectoVb\\obj\\",
+      "projectPath": "C:\\Users\\JavierMG\\Desktop\\vb2\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
+      "packagesPath": "C:\\Users\\JavierMG\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JavierMG\\Desktop\\vb2\\ProyectoVB\\ProyectoVb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xxelm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JavierMG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2043,6 +2043,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2077,7 +2082,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

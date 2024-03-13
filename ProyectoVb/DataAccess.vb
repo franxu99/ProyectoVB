@@ -2,9 +2,11 @@
 Imports MimeKit
 Imports MailKit.Net.Smtp
 Imports MailKit.Security
+Imports System.Security.Cryptography
 Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Google.Protobuf.WellKnownTypes
+Imports System.Text
 Public Class DataAccess
 
     Dim connectionString As String = "server=localhost;port=3306;database=vbdatabase;user=root; password=1234"
@@ -12,7 +14,7 @@ Public Class DataAccess
     Public Function login_reg(ByVal name_user As String, ByVal psw As String) As Integer
 
         Dim parametro1 As New MySqlParameter("@_name", name_user)
-        Dim parametro2 As New MySqlParameter("@_pass", psw)
+        Dim parametro2 As New MySqlParameter("@_pass", CreateMD5(psw))
         Dim parametroResultado As New MySqlParameter("@_res", MySqlDbType.Int32)
         Dim resultado As Integer
         parametroResultado.Direction = ParameterDirection.Output
@@ -43,7 +45,7 @@ Public Class DataAccess
 
     Public Function registro(ByVal name_user As String, ByVal psw As String, ByVal email As String) As Integer
         Dim _name As New MySqlParameter("@_name", name_user)
-        Dim _psw As New MySqlParameter("@_pass", psw)
+        Dim _psw As New MySqlParameter("@_pass", CreateMD5(psw))
         Dim _email As New MySqlParameter("@_email", email)
         Dim parametroResultado As New MySqlParameter("@_res", MySqlDbType.Int32)
         Dim resultado As Integer
@@ -100,11 +102,24 @@ Public Class DataAccess
         End Try
         Return 1
     End Function
+    Public Function CreateMD5(input As String) As String
+        If String.IsNullOrEmpty(input) Then
+            Throw New ArgumentNullException("Input cannot be null or empty.")
+        End If
+        Dim inputBytes As Byte() = Encoding.UTF8.GetBytes(input)
+        Dim md5 As MD5 = MD5.Create()
+        Dim hashBytes As Byte() = md5.ComputeHash(inputBytes)
+        Dim sb As New StringBuilder()
+        For Each b As Byte In hashBytes
+            sb.Append(b.ToString("x2"))
+        Next
+        Return sb.ToString()
+    End Function
 
     Public Function recoverPassword(email As String, code As String, npass As String) As Integer
         Dim _email As New MySqlParameter("@_email", email)
         Dim _code As New MySqlParameter("@_code", code)
-        Dim _new_password As New MySqlParameter("@_new_password", npass)
+        Dim _new_password As New MySqlParameter("@_new_password", CreateMD5(npass))
         Dim parametroResultado As New MySqlParameter("@_res", MySqlDbType.Int32)
         Dim resultado As Integer
         parametroResultado.Direction = ParameterDirection.Output

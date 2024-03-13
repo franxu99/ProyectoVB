@@ -32,11 +32,11 @@ create table recovery(
 insert into roles(description) values
 ("Owner"),("Admin"),("User");
 insert into users(name, password,id_rol)
-values("Owner","1234",1);
+values("Owner","81dc9bdb52d04dc20036dbd8313ed055",1);
 insert into users(name, password,id_rol)
-values("Admin","1234",2);
+values("Admin","81dc9bdb52d04dc20036dbd8313ed055",2);
 insert into users(name, password,id_rol)
-values("User","1234",3);
+values("User","81dc9bdb52d04dc20036dbd8313ed055",3);
 
 /* Explicación:
 Procedimiento que añade un nuevo registro en la tabla 'users'
@@ -256,6 +256,7 @@ begin
 		if val<1 then
 			set _res = -2;
 		else
+			delete from recovery where id_user=val;
 			update users set password=_new_password where id_user=val;
 			set _res=1;
 		end if;
