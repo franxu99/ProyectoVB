@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class Form1
 
-    Dim manager As New manager
+    Dim manager As New Manager
     Dim s As New conexion
 
     Sub New()
@@ -17,23 +17,21 @@ Public Class Form1
 
         Dim name_user As String = tbNameLog.Text
         Dim psw As String = tbPswLog.Text
-        Dim res As Integer = manager.login_reg(name_user, psw, 1)
-        If res > 0 Then
-            Dim user As New User(name_user, psw, res)
-            Select Case res
-                Case 1
-                    FormOwner.Show()
-                Case 2
-                    FormAdmin.Show()
-                Case 3
-                    FormUser.Show()
-            End Select
+        Dim Val As Integer = manager.login(name_user, psw)
+        If Val > 0 Then
+
+            Dim page As New FormApp(manager)
+            page.Text = "App Page"
+            AddHandler page.FormClosed, AddressOf FrmAppClose
+            Call page.Show()
             Me.Hide()
             limpiarCampos()
 
-        Else
-            MessageBox.Show("User no encontrado")
+
         End If
+    End Sub
+    Private Sub FrmAppClose(sender As Object, e As FormClosedEventArgs)
+        Me.Show()
     End Sub
     Private Sub limpiarCampos()
         tbNameLog.Text = ""
@@ -44,10 +42,11 @@ Public Class Form1
         Dim correo As String = tbRecPsw.Text
         If Not ValidarFormatoCorreo(correo) Then
             MessageBox.Show("El formato del correo no es correcto")
+            FormRecover.Show()
             Return
         End If
-        manager.recuperarContraseña(correo)
-
+        manager.recovery(correo)
+        FormRecover.Show()
     End Sub
 
     Function ValidarFormatoCorreo(ByVal correo As String) As Boolean
@@ -75,11 +74,10 @@ Public Class Form1
         End If
         Dim res As Integer = manager.registro(name_user, psw, email)
         If res > 0 Then
-            MessageBox.Show("Usuario introducido con exito")
             habilitarCamposLog()
             Return
         End If
-        MessageBox.Show("Error al introducir el usuario")
+
     End Sub
 
     Sub habilitarCamposReg()
@@ -192,4 +190,5 @@ Public Class Form1
             tbPswReg.ForeColor = Color.DarkGray
         End If
     End Sub
+
 End Class

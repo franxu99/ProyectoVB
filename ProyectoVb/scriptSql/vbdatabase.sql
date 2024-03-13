@@ -25,7 +25,7 @@ create table users(
 create table recovery(
 	id_recovery int auto_increment,
 	id_user int,
-    new_password datetime default now(),
+    new_password varchar(256),
     primary key(id_recovery),
 	foreign key(id_user) references users(id_user)
 );
@@ -52,16 +52,57 @@ begin
     from users;
 end;
 
+DROP PROCEDURE IF EXISTS getAllUsersFilterByStatus;
+
+-- Create the procedure
+create procedure getAllUsersFilterByStatus(in _status enum('Activated','Deactivated'))
+begin
+    -- Select all columns from the users table
+    select *
+    from users where status=_status;
+end;
+
+DROP PROCEDURE IF EXISTS getAllUsersFilterByDateTime;
+
+-- Create the procedure
+create procedure getAllUsersFilterByDateTime(in _date datetime)
+begin
+    -- Select all columns from the users table
+    select *
+    from users where last_login>_date;
+end;
+
+DROP PROCEDURE IF EXISTS getAllUsersFilterByDateTimeAndStatus;
+
+-- Create the procedure
+create procedure getAllUsersFilterByDateTimeAndStatus(in _date datetime,in _status enum('Activated','Deactivated'))
+begin
+    -- Select all columns from the users table
+    select *
+    from users where status=_status and last_login>_date;
+end;
+
+ 
+DROP PROCEDURE IF EXISTS getUserRol;
+
+-- Create the procedure
+create procedure getUserRol(in _id_user int, out _res int)
+begin
+    -- Select all columns from the users table
+    select id_rol into _res
+    from users where id_user=_id_user;
+end;
+
 drop procedure if exists addUser; 
 
-create procedure addUser(in _name varchar(255),in _pass varchar(255), in _email varchar(255), in _status varchar(20), in _last_login DATETIME, in _id_rol int, out _res int)
+create procedure addUser(in _name varchar(255),in _pass varchar(255), in _email varchar(255), out _res int)
 begin
 	declare val int default 0;
     set _res= -99;
 	select count(*) into val from users where name=_name;
     if val<1 then
-		insert into users (name, password, email, status, last_login, id_rol)
-		values(_name, _pass, _email, _status, _last_login, _id_rol);
+		insert into users (name, password, email)
+		values(_name, _pass, _email);
         set _res =1;
     else
     set _res =-1; 
@@ -78,7 +119,7 @@ create procedure findUser(in _name varchar(255),in _pass varchar(255),out _res i
 begin
 	declare val int default 0;
     set _res= -99;
-	select id_rol into val from users where name=_name and password=_pass;
+	select id_user into val from users where name=_name and password=_pass;
     if val<1 then
 		set _res =-1;
     else
@@ -155,6 +196,7 @@ begin
             if val2>val then
 				if val2<3 then
 					set val2=val2+1;
+					set _res = 1;
 					update users set id_rol =val2 where id_user=_id_user;
                 end if;
             else
@@ -185,17 +227,37 @@ end;
 
 drop procedure if exists addRecovery; 
 
-create procedure addRecovery(in _id_user int,out _res int)
+create procedure addRecovery(in _email varchar(256),_code varchar(256),out _res int)
 begin
 	declare val int default 0;
     set _res= -99;
-	select count(*) into val from users where id_user=_id_user;
+	select id_user into val from users where email=_email;
     if val<1 then
 		set _res =-1; 
     else
-		delete from recovery where id_user=_id_user;
-		insert into recovery(id_user)
-		values(_id_user);
+		delete from recovery where id_user=val;
+		insert into recovery(id_user,new_password)
+		values(val,_code);
         set _res =1;
+    end if;
+end;
+drop procedure if exists recoverPassWord; 
+
+create procedure recoverPassWord(in _email varchar(256),_code varchar(256),_new_password varchar(256),out _res int)
+begin
+	declare id int default 0;
+	declare val int default 0;
+    set _res= -99;
+	select id_user into id from users where email=_email;
+    if id<1 then
+		set _res =-1; 
+    else
+		select id_user into val from recovery where id_user = id and new_password=_code;
+		if val<1 then
+			set _res = -2;
+		else
+			update users set password=_new_password where id_user=val;
+			set _res=1;
+		end if;
     end if;
 end;
