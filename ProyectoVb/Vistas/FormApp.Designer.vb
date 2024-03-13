@@ -31,6 +31,7 @@ Partial Class FormApp
         BtnDowngrade = New Button()
         BtnDeactivate = New Button()
         GB1 = New GroupBox()
+        PictureBox2 = New PictureBox()
         BtnChangeOwnership = New Button()
         LblSelectedID = New Label()
         DateTime = New DateTimePicker()
@@ -41,13 +42,12 @@ Partial Class FormApp
         GroupBox2 = New GroupBox()
         GroupBox1 = New GroupBox()
         PictureBox1 = New PictureBox()
-        PictureBox2 = New PictureBox()
         PictureBox3 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         GB1.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         GbFilters.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -163,6 +163,16 @@ Partial Class FormApp
         GB1.Text = "Funciones de Administracion"
         GB1.Visible = False
         ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(61, 24)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(130, 125)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 11
+        PictureBox2.TabStop = False
+        ' 
         ' BtnChangeOwnership
         ' 
         BtnChangeOwnership.BackColor = Color.DarkSlateGray
@@ -252,6 +262,7 @@ Partial Class FormApp
         GroupBox2.Size = New Size(431, 213)
         GroupBox2.TabIndex = 13
         GroupBox2.TabStop = False
+        GroupBox2.Visible = False
         ' 
         ' GroupBox1
         ' 
@@ -262,6 +273,7 @@ Partial Class FormApp
         GroupBox1.Size = New Size(270, 487)
         GroupBox1.TabIndex = 14
         GroupBox1.TabStop = False
+        GroupBox1.Visible = False
         ' 
         ' PictureBox1
         ' 
@@ -273,16 +285,7 @@ Partial Class FormApp
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 15
         PictureBox1.TabStop = False
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(61, 24)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(130, 125)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 11
-        PictureBox2.TabStop = False
+        PictureBox1.Visible = False
         ' 
         ' PictureBox3
         ' 
@@ -297,7 +300,7 @@ Partial Class FormApp
         ' 
         ' FormApp
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1003, 524)
         Controls.Add(PictureBox3)
@@ -315,10 +318,10 @@ Partial Class FormApp
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GB1.ResumeLayout(False)
         GB1.PerformLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         GbFilters.ResumeLayout(False)
         GbFilters.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

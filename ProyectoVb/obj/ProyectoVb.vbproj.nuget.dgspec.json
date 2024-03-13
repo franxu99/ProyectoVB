@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franl\\OneDrive\\Escritorio\\VB_definitivo\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj": {}
+    "C:\\Users\\javier.martin.gonzal\\Desktop\\vbtest\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\franl\\OneDrive\\Escritorio\\VB_definitivo\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj": {
+    "C:\\Users\\javier.martin.gonzal\\Desktop\\vbtest\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franl\\OneDrive\\Escritorio\\VB_definitivo\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
+        "projectUniqueName": "C:\\Users\\javier.martin.gonzal\\Desktop\\vbtest\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
         "projectName": "ProyectoVb",
-        "projectPath": "C:\\Users\\franl\\OneDrive\\Escritorio\\VB_definitivo\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
-        "packagesPath": "C:\\Users\\franl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franl\\OneDrive\\Escritorio\\VB_definitivo\\ProyectoVB\\ProyectoVb\\obj\\",
+        "projectPath": "C:\\Users\\javier.martin.gonzal\\Desktop\\vbtest\\ProyectoVB\\ProyectoVb\\ProyectoVb.vbproj",
+        "packagesPath": "C:\\Users\\javier.martin.gonzal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\javier.martin.gonzal\\Desktop\\vbtest\\ProyectoVB\\ProyectoVb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\franl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\javier.martin.gonzal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
