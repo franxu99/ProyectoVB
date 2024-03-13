@@ -156,9 +156,6 @@ D:\Reporsitorios\ProyectoVB\ProyectoVb\bin\Debug\net8.0-windows\runtimes\win-x64
 D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.vbproj.AssemblyReference.cache
 D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.Form1.resources
 D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.Resources.resources
-D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.FormAdmin.resources
-D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.FormOwner.resources
-D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.FormUser.resources
 D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.vbproj.GenerateResource.cache
 D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.GeneratedMSBuildEditorConfig.editorconfig
 D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.AssemblyInfoInputs.cache
@@ -210,3 +207,5 @@ C:\Users\JavierMG\Desktop\vb\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\Proy
 C:\Users\JavierMG\Desktop\vb\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ref\ProyectoVb.dll
 C:\Users\JavierMG\Desktop\vb\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.FormApp.resources
 C:\Users\JavierMG\Desktop\vb\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.FormRecover.resources
+D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.FormApp.resources
+D:\Reporsitorios\ProyectoVB\ProyectoVb\obj\Debug\net8.0-windows\ProyectoVb.FormRecover.resources

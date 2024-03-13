@@ -139,7 +139,7 @@ Partial Class Form1
         ' btnCompletarReg
         ' 
         btnCompletarReg.BackColor = Color.DarkSlateGray
-        btnCompletarReg.Font = New Font("Century Gothic", 11F, FontStyle.Bold)
+        btnCompletarReg.Font = New Font("Century Gothic", 11.0F, FontStyle.Bold)
         btnCompletarReg.ForeColor = Color.White
         btnCompletarReg.Location = New Point(60, 350)
         btnCompletarReg.Name = "btnCompletarReg"
@@ -200,7 +200,7 @@ Partial Class Form1
         ' lblEmailReg
         ' 
         lblEmailReg.AutoSize = True
-        lblEmailReg.Font = New Font("Century Gothic", 11F)
+        lblEmailReg.Font = New Font("Century Gothic", 11.0F)
         lblEmailReg.Location = New Point(66, 264)
         lblEmailReg.Name = "lblEmailReg"
         lblEmailReg.Size = New Size(46, 20)
@@ -257,7 +257,7 @@ Partial Class Form1
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Century Gothic", 14F)
+        lblTitle.Font = New Font("Century Gothic", 14.0F)
         lblTitle.Location = New Point(130, 143)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(77, 22)
@@ -286,7 +286,7 @@ Partial Class Form1
         ' btnRecPsw
         ' 
         btnRecPsw.BackColor = Color.DarkSlateGray
-        btnRecPsw.Font = New Font("Century Gothic", 10F)
+        btnRecPsw.Font = New Font("Century Gothic", 10.0F)
         btnRecPsw.ForeColor = Color.White
         btnRecPsw.Location = New Point(6, 361)
         btnRecPsw.Name = "btnRecPsw"
@@ -313,7 +313,7 @@ Partial Class Form1
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
         PictureBox2.Location = New Point(0, 0)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(800, 450)
+        PictureBox2.Size = New Size(800, 552)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 5
         PictureBox2.TabStop = False
@@ -330,10 +330,10 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(800, 552)
         Controls.Add(btn)
         Controls.Add(GroupBox1)
         Controls.Add(GroupBox2)

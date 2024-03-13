@@ -135,4 +135,14 @@
             Next
         End If
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Label1.Parent = PictureBox1
+        Label1.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub LblName_Click(sender As Object, e As EventArgs) Handles LblName.Click
+        LblName.Parent = PictureBox1
+        LblName.BackColor = Color.Transparent
+    End Sub
 End Class

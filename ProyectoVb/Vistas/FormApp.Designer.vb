@@ -21,6 +21,7 @@ Partial Class FormApp
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormApp))
         DataGridView1 = New DataGridView()
         Button1 = New Button()
         Label1 = New Label()
@@ -37,94 +38,126 @@ Partial Class FormApp
         CBDatetime = New CheckBox()
         BtnAplicarFiltros = New Button()
         ClbActivated = New CheckedListBox()
+        GroupBox2 = New GroupBox()
+        GroupBox1 = New GroupBox()
+        PictureBox1 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        PictureBox3 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         GB1.SuspendLayout()
         GbFilters.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(76, 218)
+        DataGridView1.Location = New Point(66, 238)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(567, 229)
+        DataGridView1.Size = New Size(598, 261)
         DataGridView1.TabIndex = 0
         DataGridView1.Visible = False
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(53, 35)
+        Button1.BackColor = Color.DarkSlateGray
+        Button1.Cursor = Cursors.Hand
+        Button1.Font = New Font("Century Gothic", 12.75F, FontStyle.Bold)
+        Button1.ForeColor = SystemColors.ButtonHighlight
+        Button1.Location = New Point(47, 146)
         Button1.Name = "Button1"
-        Button1.Size = New Size(97, 25)
+        Button1.Size = New Size(133, 71)
         Button1.TabIndex = 1
-        Button1.Text = "Cerrar Sesión"
-        Button1.UseVisualStyleBackColor = True
+        Button1.Text = "CERRAR SESIÓN"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(262, 35)
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = SystemColors.ActiveCaptionText
+        Label1.Location = New Point(30, 49)
         Label1.Name = "Label1"
-        Label1.Size = New Size(69, 15)
+        Label1.Size = New Size(165, 33)
         Label1.TabIndex = 2
-        Label1.Text = "Bienvenido:"
+        Label1.Text = "Bienvenido"
         ' 
         ' LblName
         ' 
         LblName.AutoSize = True
-        LblName.Location = New Point(337, 35)
+        LblName.BackColor = Color.Transparent
+        LblName.Font = New Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LblName.ForeColor = SystemColors.ActiveCaptionText
+        LblName.Location = New Point(47, 88)
         LblName.Name = "LblName"
-        LblName.Size = New Size(55, 15)
+        LblName.Size = New Size(133, 33)
         LblName.TabIndex = 3
         LblName.Text = "LblName"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(16, 38)
+        Label2.Location = New Point(61, 159)
         Label2.Name = "Label2"
-        Label2.Size = New Size(91, 15)
+        Label2.Size = New Size(131, 20)
         Label2.TabIndex = 4
         Label2.Text = "ID Seleccionado"
         ' 
         ' BtnUpgrade
         ' 
-        BtnUpgrade.Location = New Point(6, 65)
+        BtnUpgrade.BackColor = Color.DarkSlateGray
+        BtnUpgrade.Cursor = Cursors.Hand
+        BtnUpgrade.Font = New Font("Century Gothic", 11.25F, FontStyle.Bold)
+        BtnUpgrade.ForeColor = SystemColors.ButtonFace
+        BtnUpgrade.Location = New Point(21, 211)
         BtnUpgrade.Name = "BtnUpgrade"
-        BtnUpgrade.Size = New Size(188, 23)
+        BtnUpgrade.Size = New Size(213, 50)
         BtnUpgrade.TabIndex = 5
-        BtnUpgrade.Text = "Upgrade User"
-        BtnUpgrade.UseVisualStyleBackColor = True
+        BtnUpgrade.Text = "UPGRADE USER"
+        BtnUpgrade.UseVisualStyleBackColor = False
         ' 
         ' BtnDowngrade
         ' 
-        BtnDowngrade.Location = New Point(6, 94)
+        BtnDowngrade.BackColor = Color.DarkSlateGray
+        BtnDowngrade.Cursor = Cursors.Hand
+        BtnDowngrade.Font = New Font("Century Gothic", 11.25F, FontStyle.Bold)
+        BtnDowngrade.ForeColor = SystemColors.ButtonFace
+        BtnDowngrade.Location = New Point(21, 267)
         BtnDowngrade.Name = "BtnDowngrade"
-        BtnDowngrade.Size = New Size(188, 23)
+        BtnDowngrade.Size = New Size(213, 50)
         BtnDowngrade.TabIndex = 6
-        BtnDowngrade.Text = "Downgrade User"
-        BtnDowngrade.UseVisualStyleBackColor = True
+        BtnDowngrade.Text = "DOWNGRADE USER"
+        BtnDowngrade.UseVisualStyleBackColor = False
         ' 
         ' BtnDeactivate
         ' 
-        BtnDeactivate.Location = New Point(6, 123)
+        BtnDeactivate.BackColor = Color.DarkSlateGray
+        BtnDeactivate.Cursor = Cursors.Hand
+        BtnDeactivate.Font = New Font("Century Gothic", 11.25F, FontStyle.Bold)
+        BtnDeactivate.ForeColor = SystemColors.ButtonFace
+        BtnDeactivate.Location = New Point(21, 323)
         BtnDeactivate.Name = "BtnDeactivate"
-        BtnDeactivate.Size = New Size(188, 23)
+        BtnDeactivate.Size = New Size(213, 54)
         BtnDeactivate.TabIndex = 7
-        BtnDeactivate.Text = "Deactivate/Activate User"
-        BtnDeactivate.UseVisualStyleBackColor = True
+        BtnDeactivate.Text = "DESACTIVATE / ACTIVATE USER"
+        BtnDeactivate.UseVisualStyleBackColor = False
         ' 
         ' GB1
         ' 
+        GB1.Controls.Add(PictureBox2)
         GB1.Controls.Add(BtnChangeOwnership)
         GB1.Controls.Add(LblSelectedID)
         GB1.Controls.Add(Label2)
         GB1.Controls.Add(BtnDeactivate)
         GB1.Controls.Add(BtnUpgrade)
         GB1.Controls.Add(BtnDowngrade)
-        GB1.Location = New Point(773, 218)
+        GB1.Font = New Font("Century Gothic", 11F)
+        GB1.Location = New Point(701, 25)
         GB1.Name = "GB1"
-        GB1.Size = New Size(200, 183)
+        GB1.Size = New Size(252, 467)
         GB1.TabIndex = 8
         GB1.TabStop = False
         GB1.Text = "Funciones de Administracion"
@@ -132,28 +165,33 @@ Partial Class FormApp
         ' 
         ' BtnChangeOwnership
         ' 
-        BtnChangeOwnership.Location = New Point(6, 152)
+        BtnChangeOwnership.BackColor = Color.DarkSlateGray
+        BtnChangeOwnership.Cursor = Cursors.Hand
+        BtnChangeOwnership.Font = New Font("Century Gothic", 11.25F, FontStyle.Bold)
+        BtnChangeOwnership.ForeColor = SystemColors.ButtonFace
+        BtnChangeOwnership.Location = New Point(21, 383)
         BtnChangeOwnership.Name = "BtnChangeOwnership"
-        BtnChangeOwnership.Size = New Size(188, 23)
+        BtnChangeOwnership.Size = New Size(213, 54)
         BtnChangeOwnership.TabIndex = 10
-        BtnChangeOwnership.Text = "Change Ownership"
-        BtnChangeOwnership.UseVisualStyleBackColor = True
+        BtnChangeOwnership.Text = "CHANGE OWNERSHIP"
+        BtnChangeOwnership.UseVisualStyleBackColor = False
         BtnChangeOwnership.Visible = False
         ' 
         ' LblSelectedID
         ' 
         LblSelectedID.AutoSize = True
-        LblSelectedID.Location = New Point(113, 38)
+        LblSelectedID.Location = New Point(99, 179)
         LblSelectedID.Name = "LblSelectedID"
-        LblSelectedID.Size = New Size(41, 15)
+        LblSelectedID.Size = New Size(57, 20)
         LblSelectedID.TabIndex = 9
         LblSelectedID.Text = "Label3"
         ' 
         ' DateTime
         ' 
-        DateTime.Location = New Point(145, 22)
+        DateTime.CalendarFont = New Font("Century Gothic", 11F)
+        DateTime.Location = New Point(80, 85)
         DateTime.Name = "DateTime"
-        DateTime.Size = New Size(240, 23)
+        DateTime.Size = New Size(227, 23)
         DateTime.TabIndex = 10
         ' 
         ' GbFilters
@@ -162,9 +200,9 @@ Partial Class FormApp
         GbFilters.Controls.Add(BtnAplicarFiltros)
         GbFilters.Controls.Add(ClbActivated)
         GbFilters.Controls.Add(DateTime)
-        GbFilters.Location = New Point(76, 102)
+        GbFilters.Location = New Point(243, 27)
         GbFilters.Name = "GbFilters"
-        GbFilters.Size = New Size(402, 100)
+        GbFilters.Size = New Size(408, 190)
         GbFilters.TabIndex = 11
         GbFilters.TabStop = False
         GbFilters.Text = "Filtros"
@@ -173,43 +211,105 @@ Partial Class FormApp
         ' CBDatetime
         ' 
         CBDatetime.AutoSize = True
-        CBDatetime.Location = New Point(145, 46)
+        CBDatetime.Font = New Font("Century Gothic", 11F)
+        CBDatetime.Location = New Point(47, 59)
         CBDatetime.Name = "CBDatetime"
-        CBDatetime.Size = New Size(223, 19)
+        CBDatetime.Size = New Size(304, 24)
         CBDatetime.TabIndex = 12
         CBDatetime.Text = "Buscar registros posteriores a la fecha"
         CBDatetime.UseVisualStyleBackColor = True
         ' 
         ' BtnAplicarFiltros
         ' 
-        BtnAplicarFiltros.Location = New Point(321, 71)
+        BtnAplicarFiltros.BackColor = Color.DarkSlateGray
+        BtnAplicarFiltros.Cursor = Cursors.Hand
+        BtnAplicarFiltros.Font = New Font("Century Gothic", 14.75F, FontStyle.Bold)
+        BtnAplicarFiltros.ForeColor = SystemColors.ButtonFace
+        BtnAplicarFiltros.Location = New Point(85, 119)
         BtnAplicarFiltros.Name = "BtnAplicarFiltros"
-        BtnAplicarFiltros.Size = New Size(75, 23)
+        BtnAplicarFiltros.Size = New Size(222, 58)
         BtnAplicarFiltros.TabIndex = 11
-        BtnAplicarFiltros.Text = "Aplicar Filtros"
-        BtnAplicarFiltros.UseVisualStyleBackColor = True
+        BtnAplicarFiltros.Text = "APLICAR FILTROS"
+        BtnAplicarFiltros.UseVisualStyleBackColor = False
         ' 
         ' ClbActivated
         ' 
         ClbActivated.CheckOnClick = True
+        ClbActivated.Font = New Font("Century Gothic", 11F)
         ClbActivated.FormattingEnabled = True
         ClbActivated.Items.AddRange(New Object() {"Activated", "Deactivated"})
-        ClbActivated.Location = New Point(6, 19)
+        ClbActivated.Location = New Point(136, 9)
         ClbActivated.Name = "ClbActivated"
-        ClbActivated.Size = New Size(95, 40)
+        ClbActivated.Size = New Size(126, 44)
         ClbActivated.TabIndex = 9
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
+        GroupBox2.BackgroundImage = CType(resources.GetObject("GroupBox2.BackgroundImage"), Image)
+        GroupBox2.Location = New Point(231, 14)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(431, 213)
+        GroupBox2.TabIndex = 13
+        GroupBox2.TabStop = False
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
+        GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), Image)
+        GroupBox1.Location = New Point(692, 12)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(270, 487)
+        GroupBox1.TabIndex = 14
+        GroupBox1.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(1003, 524)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 15
+        PictureBox1.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(61, 24)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(130, 125)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 11
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = Color.Transparent
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(101, 206)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(21, 18)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 16
+        PictureBox3.TabStop = False
         ' 
         ' FormApp
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1003, 524)
+        Controls.Add(PictureBox3)
         Controls.Add(GbFilters)
         Controls.Add(GB1)
         Controls.Add(LblName)
         Controls.Add(Label1)
         Controls.Add(Button1)
         Controls.Add(DataGridView1)
+        Controls.Add(GroupBox2)
+        Controls.Add(GroupBox1)
+        Controls.Add(PictureBox1)
         Name = "FormApp"
         Text = "FormAdmin"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
@@ -217,6 +317,9 @@ Partial Class FormApp
         GB1.PerformLayout()
         GbFilters.ResumeLayout(False)
         GbFilters.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -238,4 +341,9 @@ Partial Class FormApp
     Friend WithEvents BtnAplicarFiltros As Button
     Friend WithEvents ClbActivated As CheckedListBox
     Friend WithEvents CBDatetime As CheckBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

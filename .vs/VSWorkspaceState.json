@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ProyectoVb"
+    "\\ProyectoVb",
+    "\\ProyectoVb\\Vistas"
   ],
-  "SelectedNode": "\\ProyectoVb.sln",
+  "SelectedNode": "\\ProyectoVb\\Vistas\\FormApp.vb",
   "PreviewInSolutionExplorer": false
 }
